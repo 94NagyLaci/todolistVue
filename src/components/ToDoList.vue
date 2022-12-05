@@ -2,11 +2,18 @@
 
   <input type="text" v-model='todo' @change="addItem(todo)" placeholder="Új feladat megadása">
 
-  <ul>
+  <!-- <ul>
     <li v-for="needtodo in todoList">
     {{needtodo}}
     </li>
-  </ul>
+  </ul> -->
+
+  <table>
+    <tr v-for="todoN in todoList">
+    <td> {{todoN}} </td>
+    <td>  <span class="btn btn-danger" @click="deleteItem(todo)"> Törlés </span></td>
+  </tr>
+  </table>
 
 </template>
 <script setup>
